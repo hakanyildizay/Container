@@ -3,37 +3,37 @@
                       {
                       "name" : "Workplace",
                       "url" : "urlString",
-                      "image" : "imageName",
+                      "image" : "ingmobile",
                       "downloadUrl" : "https://www.google.com.tr"
                       },
                       {
                       "name" : "Skype Business",
                       "url" : "urlString",
-                      "image" : "imageName",
+                      "image" : "ingmobile",
                       "downloadUrl" : "https://www.google.com.tr"
                       },
                       {
                       "name" : "Cepten Yapp",
                       "url" : "urlString",
-                      "image" : "imageName",
+                      "image" : "ingmobile",
                       "downloadUrl" : "https://www.google.com.tr"
                       },
                       {
                       "name" : "Ing Mobil",
                       "url" : "ingmobile://",
-                      "image" : "imageName",
+                      "image" : "ingmobile",
                       "downloadUrl" : "https://www.google.com.tr"
                       },
                       {
                       "name" : "Paramara",
                       "url" : "urlString",
-                      "image" : "imageName",
+                      "image" : "ingmobile",
                       "downloadUrl" : "https://www.google.com.tr"
                       },
                       {
                       "name" : "ING Akademi",
                       "url" : "urlString",
-                      "image" : "imageName",
+                      "image" : "ingmobile",
                       "downloadUrl" : "https://www.google.com.tr"
                       }]
 }

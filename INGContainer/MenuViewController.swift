@@ -103,6 +103,7 @@ class MenuViewController: UICollectionViewController, UICollectionViewDelegateFl
         let json = self.applications[indexPath.section][indexPath.row]
         // Configure the cell
         cell.titleLabel.text = json["name"].stringValue
+        cell.imageView.image = UIImage.init(named: json["image"].stringValue)
         return cell
     }
     
@@ -180,7 +181,7 @@ class MenuViewController: UICollectionViewController, UICollectionViewDelegateFl
             
             let emptySpace = self.collectionView!.frame.size.height-self.collectionView!.contentSize.height
             if emptySpace > 0{
-                self.collectionView?.contentInset.top = emptySpace / 2.0
+                self.collectionView?.contentInset.top = emptySpace / 2.5
             }
             
         }
