@@ -44,7 +44,6 @@
                                         </imageView>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" red="0.8980392157" green="0.82745098039999998" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="MS6-J2-ODb" firstAttribute="leading" secondItem="Bwg-g4-IeO" secondAttribute="leadingMargin" id="1hZ-7H-HuB"/>
                                     <constraint firstItem="ubo-wE-Ps5" firstAttribute="centerX" secondItem="Bwg-g4-IeO" secondAttribute="centerX" id="6gg-HL-pFp"/>
