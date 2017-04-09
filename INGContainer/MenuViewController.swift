@@ -19,20 +19,13 @@ class MenuViewController: UICollectionViewController, UICollectionViewDelegateFl
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        self.collectionView?.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.old, context: nil)
         let singleArrayOfApplications = self.getApplications()
         let columnCount = singleArrayOfApplications.count / numberOfColumns
         var doubleArray = Array<Array<JSON>>.init(repeating: Array<JSON>.init(), count: columnCount)
         var sizes = Array<Array<CGSize>>.init(repeating: Array<CGSize>.init(), count: columnCount)
         
         for i in 0..<columnCount {
-            /*
-            var singleRow = [JSON]()
-            singleRow.append(singleArrayOfApplications[numberOfColumns * i])
-            singleRow.append(singleArrayOfApplications[(numberOfColumns * i)+1])
-            singleRow.append(singleArrayOfApplications[(numberOfColumns * i)+2])
-            doubleArray[i] = singleRow
-            */
             
             var singleRow = [JSON]()
             
@@ -107,14 +100,50 @@ class MenuViewController: UICollectionViewController, UICollectionViewDelegateFl
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MenuCollectionViewCell
-        
+        let json = self.applications[indexPath.section][indexPath.row]
         // Configure the cell
-        cell.titleLabel.text = "\(indexPath.row)"
+        cell.titleLabel.text = json["name"].stringValue
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let json = self.applications[indexPath.section][indexPath.row]
+        self.open(app: json)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return self.itemSize[indexPath.section][indexPath.row]
+    }
+    
+    func open(app: JSON) {
+        let scheme = app["url"].stringValue
+        let downloadString = app["downloadUrl"].stringValue
+        let downloadURL = NSURL(string:downloadString) as? URL ?? NSURL.init() as URL
+        
+        if let url = URL(string: scheme) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: {
+                    (success) in
+                    if !success{
+                        
+                        UIApplication.shared.open(downloadURL, options: [:], completionHandler: { (success) in
+                            print("Redirected ..")
+                        })
+                        
+                    }
+                })
+            } else {
+                // Fallback on earlier versions
+                let didOpen = UIApplication.shared.openURL(url)
+                if !didOpen{
+                    //Redirect to a download link
+                    print("Redirect to a different link")
+                    UIApplication.shared.openURL(downloadURL)
+                }
+            }
+        }
     }
     
     
@@ -143,6 +172,18 @@ class MenuViewController: UICollectionViewController, UICollectionViewDelegateFl
         }
         
         
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
+    {
+        if keyPath == "contentSize"{
+            
+            let emptySpace = self.collectionView!.frame.size.height-self.collectionView!.contentSize.height
+            if emptySpace > 0{
+                self.collectionView?.contentInset.top = emptySpace / 2.0
+            }
+            
+        }
     }
 
     // MARK: UICollectionViewDelegate
