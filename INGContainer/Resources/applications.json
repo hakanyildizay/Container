@@ -1,0 +1,33 @@
+{
+    "applications" : [
+                      {
+                      "name" : "Workplace",
+                      "url" : "urlString",
+                      "image" : "imageName"
+                      },
+                      {
+                      "name" : "Skype Business",
+                      "url" : "urlString",
+                      "image" : "imageName"
+                      },
+                      {
+                      "name" : "Cepten Yapp",
+                      "url" : "urlString",
+                      "image" : "imageName"
+                      },
+                      {
+                      "name" : "Ing Mobil",
+                      "url" : "urlString",
+                      "image" : "imageName"
+                      },
+                      {
+                      "name" : "Paramara",
+                      "url" : "urlString",
+                      "image" : "imageName"
+                      },
+                      {
+                      "name" : "ING Akademi",
+                      "url" : "urlString",
+                      "image" : "imageName"
+                      }]
+}

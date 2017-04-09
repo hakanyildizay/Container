@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF28839C1E9A9A2E005E24A1 /* applications.json in Resources */ = {isa = PBXBuildFile; fileRef = DF28839B1E9A9A2E005E24A1 /* applications.json */; };
+		DF28839E1E9A9BFD005E24A1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF28839D1E9A9BFD005E24A1 /* SwiftyJSON.swift */; };
 		DF385A8B1E4E03FD00A2A9A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF385A8A1E4E03FD00A2A9A0 /* AppDelegate.swift */; };
-		DF385A8D1E4E03FD00A2A9A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF385A8C1E4E03FD00A2A9A0 /* ViewController.swift */; };
 		DF385A901E4E03FD00A2A9A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF385A8E1E4E03FD00A2A9A0 /* Main.storyboard */; };
 		DF385A921E4E03FD00A2A9A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF385A911E4E03FD00A2A9A0 /* Assets.xcassets */; };
 		DF385A951E4E03FD00A2A9A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF385A931E4E03FD00A2A9A0 /* LaunchScreen.storyboard */; };
+		DF385A9D1E4E049300A2A9A0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF385A9C1E4E049300A2A9A0 /* MenuViewController.swift */; };
+		DF385A9F1E4E09AF00A2A9A0 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF385A9E1E4E09AF00A2A9A0 /* MenuCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF28839B1E9A9A2E005E24A1 /* applications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = applications.json; sourceTree = "<group>"; };
+		DF28839D1E9A9BFD005E24A1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../SwiftyJSON.swift; sourceTree = "<group>"; };
 		DF385A871E4E03FD00A2A9A0 /* INGContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INGContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF385A8A1E4E03FD00A2A9A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF385A8C1E4E03FD00A2A9A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DF385A8F1E4E03FD00A2A9A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF385A911E4E03FD00A2A9A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF385A941E4E03FD00A2A9A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF385A961E4E03FD00A2A9A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF385A9C1E4E049300A2A9A0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		DF385A9E1E4E09AF00A2A9A0 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF28839A1E9A99EB005E24A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF28839D1E9A9BFD005E24A1 /* SwiftyJSON.swift */,
+				DF28839B1E9A9A2E005E24A1 /* applications.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DF385A7E1E4E03FD00A2A9A0 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +69,14 @@
 		DF385A891E4E03FD00A2A9A0 /* INGContainer */ = {
 			isa = PBXGroup;
 			children = (
+				DF28839A1E9A99EB005E24A1 /* Resources */,
 				DF385A8A1E4E03FD00A2A9A0 /* AppDelegate.swift */,
-				DF385A8C1E4E03FD00A2A9A0 /* ViewController.swift */,
 				DF385A8E1E4E03FD00A2A9A0 /* Main.storyboard */,
 				DF385A911E4E03FD00A2A9A0 /* Assets.xcassets */,
 				DF385A931E4E03FD00A2A9A0 /* LaunchScreen.storyboard */,
 				DF385A961E4E03FD00A2A9A0 /* Info.plist */,
+				DF385A9C1E4E049300A2A9A0 /* MenuViewController.swift */,
+				DF385A9E1E4E09AF00A2A9A0 /* MenuCollectionViewCell.swift */,
 			);
 			path = INGContainer;
 			sourceTree = "<group>";
@@ -124,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF28839C1E9A9A2E005E24A1 /* applications.json in Resources */,
 				DF385A951E4E03FD00A2A9A0 /* LaunchScreen.storyboard in Resources */,
 				DF385A921E4E03FD00A2A9A0 /* Assets.xcassets in Resources */,
 				DF385A901E4E03FD00A2A9A0 /* Main.storyboard in Resources */,
@@ -137,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF385A8D1E4E03FD00A2A9A0 /* ViewController.swift in Sources */,
+				DF385A9D1E4E049300A2A9A0 /* MenuViewController.swift in Sources */,
 				DF385A8B1E4E03FD00A2A9A0 /* AppDelegate.swift in Sources */,
+				DF385A9F1E4E09AF00A2A9A0 /* MenuCollectionViewCell.swift in Sources */,
+				DF28839E1E9A9BFD005E24A1 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +283,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2GKG6WK3GH;
 				INFOPLIST_FILE = INGContainer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ingbank.INGContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +297,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2GKG6WK3GH;
 				INFOPLIST_FILE = INGContainer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ingbank.INGContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +324,7 @@
 				DF385A9B1E4E03FD00A2A9A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
