@@ -2,13 +2,13 @@
     "applications" : [
                       {
                       "name" : "Workplace",
-                      "url" : "urlString",
+                      "url" : "fb-workchat://",
                       "image" : "ingmobile",
                       "downloadUrl" : "https://www.google.com.tr"
                       },
                       {
                       "name" : "Skype Business",
-                      "url" : "urlString",
+                      "url" : "ms-sfb://",
                       "image" : "ingmobile",
                       "downloadUrl" : "https://www.google.com.tr"
                       },
@@ -26,7 +26,7 @@
                       },
                       {
                       "name" : "Paramara",
-                      "url" : "urlString",
+                      "url" : "paramara://",
                       "image" : "ingmobile",
                       "downloadUrl" : "https://www.google.com.tr"
                       },
